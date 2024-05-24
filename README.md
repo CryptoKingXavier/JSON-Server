@@ -40,7 +40,7 @@ These instructions will get you a copy of the project up and running on your loc
     ./setup.sh
     ```
 
-2. The server will be running at `http://127.0.0.1:8080`.
+2. The server will be running at `http://localhost:5000`.
 
 ### Endpoints
 
