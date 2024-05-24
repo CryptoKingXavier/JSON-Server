@@ -33,13 +33,14 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Usage
 
-1. Start the Flask server:
+1. Start the Bash Script:
 
     ```bash
-    python app.py
+    chmod +x setup.sh
+    ./setup.sh
     ```
 
-2. The server will be running at `http://localhost:5000`.
+2. The server will be running at `http://127.0.0.1:8080`.
 
 ### Endpoints
 
