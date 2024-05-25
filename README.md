@@ -44,8 +44,8 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Endpoints
 
-- **GET /data**: Retrieve all JSON data.
-- **GET /data/{id}**: Retrieve JSON data by ID.
-- **POST /data**: Add new JSON data.
-- **PUT /data/{id}**: Update existing JSON data.
-- **DELETE /data/{id}**: Delete JSON data by ID.
+- **GET /jobs**: Retrieve all JSON data.
+- **GET /jobs/{id}**: Retrieve JSON data by ID.
+- **POST /jobs**: Add new JSON data.
+- **PUT /jobs/{id}**: Update existing JSON data.
+- **DELETE /jobs/{id}**: Delete JSON data by ID.
