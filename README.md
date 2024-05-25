@@ -22,7 +22,7 @@ These instructions will get you a copy of the project up and running on your loc
 2. Navigate to the project directory:
 
     ```bash
-    cd your_project
+    cd JSON-Server
     ```
 
 3. Install dependencies:
