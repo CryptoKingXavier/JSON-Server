@@ -3,8 +3,8 @@ from flask import Blueprint, redirect, url_for, request
 
 
 server: Blueprint = Blueprint("server", __name__)
-json_path = "./learnapp/json/jobs.json"
-setup_path = "./learnapp/json/setup.json"
+json_path = "./json_server/json/jobs.json"
+setup_path = "./json_server/json/setup.json"
 
 
 # Utilities
