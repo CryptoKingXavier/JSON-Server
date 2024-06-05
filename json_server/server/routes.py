@@ -71,17 +71,17 @@ def create_job():
     with open(json_path, "w") as server_file:
         dump(json_data, server_file, indent=4, sort_keys=True)
     
-    return redirect(url_for("server.read_jobs"))
+    return get_jobs()
 
 
 # PATCH /jobs/{id}/: Partially update existing JSON data.
-@server.patch("/jobs/<id>/")
 # PUT /jobs/{id}/: Fully update existing JSON data.
+@server.patch("/jobs/<id>/")
 @server.put("/jobs/<id>/")
 def update_job(id):
-    jobs = get_jobs()
     if id not in get_ids(): return "⚠️ Not Found! ⚠️"
     else:
+	jobs = get_jobs()
         for job in jobs:
             if job["id"] == id: job.update(request.form)
     
@@ -90,16 +90,16 @@ def update_job(id):
     with open(json_path, "w") as server_file:
         dump(json_data, server_file, indent=4, sort_keys=True)
     
-    return redirect(url_for("server.read_jobs"))
+    return get_jobs()
 
 
 
 # DELETE /jobs/{id}/: Delete JSON data by ID.
 @server.delete("/jobs/<id>/")
 def delete_job(id):
-    jobs = get_jobs()
     if id not in get_ids(): return "⚠️ Not Found! ⚠️"
     else:
+	jobs = get_jobs()
         for job in get_jobs():
             if job["id"] == id: jobs.remove(job)
     
@@ -108,4 +108,4 @@ def delete_job(id):
     with open(json_path, "w") as server_file:
         dump(json_data, server_file, indent=4, sort_keys=True)
     
-    return redirect(url_for("server.read_jobs"))
+    return get_jobs()
