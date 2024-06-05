@@ -99,7 +99,7 @@ def update_job(id):
 def delete_job(id):
     if id not in get_ids(): return "⚠️ Not Found! ⚠️"
     else:
-	jobs = get_jobs()
+        jobs = get_jobs()
         for job in get_jobs():
             if job["id"] == id: jobs.remove(job)
     
