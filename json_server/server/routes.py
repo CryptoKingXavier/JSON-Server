@@ -81,7 +81,7 @@ def create_job():
 def update_job(id):
     if id not in get_ids(): return "⚠️ Not Found! ⚠️"
     else:
-		jobs = get_jobs()
+	jobs = get_jobs()
         for job in jobs:
             if job["id"] == id: job.update(request.form)
     
